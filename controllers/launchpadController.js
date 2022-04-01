@@ -1,7 +1,8 @@
 const launchpadModel = require('../models/launchpadModel')
 
-async function getAllLaunchpad(){
-	return await launchpadModel.find()
+async function searchLaunchpad(searchQuery){
+	console.log(searchQuery)
+	return await launchpadModel.find(searchQuery)
 }
 
 async function getLaunchpad({launchpadId}){
@@ -21,7 +22,7 @@ async function addLaunchpad({launchpadId, name, company, active, location, avail
 }
 
 module.exports = {
-	getAllLaunchpad,
+	searchLaunchpad,
 	addLaunchpad,
 	getLaunchpad
 }

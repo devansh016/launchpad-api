@@ -4,12 +4,11 @@ const launchpadContoller = require('../controllers/launchpadController')
 
 router.get('/launchpad', getAllLaunchpad)
 router.get('/launchpad/:launchpadId', getLaunchpad)
-router.post('/launchpad/search', searchLaunchpad)
 router.post('/addLaunchpad', addLaunchpad)
 
 
 function getAllLaunchpad(req, res, next){
-	launchpadContoller.getAllLaunchpad()
+	launchpadContoller.searchLaunchpad(req.query)
 		.then(data => {
 			res.send(data)
 		})
@@ -28,10 +27,6 @@ function getLaunchpad(req, res, next){
 	.then(data => {
 		res.send(data)
 	})
-}
-
-function searchLaunchpad(req, res, next){
-	//TO BE DONE
 }
 
 module.exports = router
