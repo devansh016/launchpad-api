@@ -46,7 +46,7 @@ Gets all launchpad if no params used. Filter also available
    `location.country=[alphanumeric]`
    `location.state=[alphanumeric]`
    
-  **Get Launchpad with particular ID**
+**Get Launchpad with particular ID**
 ----
 
 * **URL**
@@ -57,7 +57,7 @@ Gets all launchpad if no params used. Filter also available
  
   `GET`
   
-   **Add a Launchpad **
+ **Add a Launchpad**
 ----
 
 * **URL**
